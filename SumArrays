@@ -1,0 +1,29 @@
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+size_t sum(vector<size_t> nums) {
+    size_t input = 0;
+
+    cout << "entrez les chiffre sque vous voulez additionner, quand vous avez fini, entrez 'f'";
+    while (cin >> input && input != 'f'){
+        nums.push_back (input);
+    }
+
+    size_t sum = 0;
+    for (const int& i : nums ){
+        sum += nums.at(i);
+    }
+    return sum;
+
+}
+
+int main(){
+
+    vector<size_t> numbers = {};
+
+    cout << sum (numbers);
+
+    return 0;
+}
