@@ -1,0 +1,31 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+string no_space(const string& x) {
+
+    string y = x;
+
+    int len = y.length();
+
+    for (int i = 0; i < len; ++i) {
+        if (y[i] == ' ') {
+            for (int j = i; j < (len - i); ++j){
+                y[i] = y[i + 1];
+            }
+        }
+
+    }
+
+    return y;
+}
+
+int main (){
+
+    string str = "8 j 8   mBliB8g  imjB8B8  jl  B";
+
+    cout << no_space (str);
+
+    return 0;
+}
